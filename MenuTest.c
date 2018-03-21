@@ -74,35 +74,27 @@ int main(){
     }
     printf("\n ");
     
-    /*switch ( expression )
+   switch ( alg )
      
      {
      
-     declaraciones
-     
-     .
-     
-     .
-   
-     case       : seleccion(tabla[],tam);
+     case 1  : burbuja(tabla[],tam);
     
-     case       : burbuja(tabla[],tam);
-    
-     case       : insercion(tabla[],tam);
-    
-     case       : quicksort(tabla[],tam);
+     case 2  : insercion(tabla[],tam);
+ 
+     case 3  : seleccion(tabla[],tam);
      
-     .
+     case 4  : shell(tabla[],tam);
+     
+     case 5  : monticulo(tabla[],tam);
+     
+     case 6  : quicksort(tabla[],tam);
+     
+    
      
      break;
      
-     default:
-     
-     instrucciones ejecutadas si la expresión no es igual a
-     
-     cualquier expresión constante case
-     
-     }*/
+     }
     
     
     return 0;
