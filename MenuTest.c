@@ -73,8 +73,15 @@ int main(){
         printf("%d  ", tablainv[i].clave);
     }
     printf("\n ");
+   
+/* seleccion tabla (aqui se puede optimizar poniendolo antes de crear cosas innecesarias, mas adelante*/
+    if(tab==2){ for (i=0; i< tam; i++)  tabla[i]=tablaaleat[i];}
+    if(tab==3){ for (i=0; i< tam; i++)  tabla[i]=tablainv[i];}
+  
     
-   switch ( alg )
+/* seleccion algoritmo*/
+  
+    switch ( alg )
      
      {
      
