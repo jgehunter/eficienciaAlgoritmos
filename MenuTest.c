@@ -93,7 +93,7 @@ int main(){
      
      case 4 : shell(&tabla,tam);
      
-     case 5 : monticulo(0,tam-1);
+     case 5 : monticulo(&tabla,tam);
      
      case 6 : quicksort(0,tam-1);
      
