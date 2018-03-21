@@ -7,7 +7,7 @@ int main(){
     
     int tab, tam, alg;
     int i;
-   struct a {
+   struct lista {
         int clave;
         /*  char *first_name;*/
         /*  char *last_name;*/
@@ -15,7 +15,7 @@ int main(){
     
     
     
-    struct a tabla[tam], tablaaleat[tam], tablainv[tam], aux;
+    struct lista tabla[tam], tablaaleat[tam], tablainv[tam], aux;
     
     
     srand (time(NULL));
