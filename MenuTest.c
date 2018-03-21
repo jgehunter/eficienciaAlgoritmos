@@ -7,7 +7,7 @@ int main(){
     
     int tab, tam, alg;
     int i;
-   struct a {
+   struct lista {
         int clave;
         /*  char *first_name;*/
         /*  char *last_name;*/
@@ -15,7 +15,7 @@ int main(){
     
     
     
-    struct a tabla[tam], tablaaleat[tam], tablainv[tam], aux;
+    struct lista tabla[tam], tablaaleat[tam], tablainv[tam], aux;
     
     
     srand (time(NULL));
@@ -57,7 +57,7 @@ int main(){
     
     for (i=0; i< tam; i++)  tablainv[i]=tabla[tam-1-i];  /* rellenar la tabla inversa */
     
-    /* mostrarlo  */
+    /* mostrarlo para pruebas */
     
     for (i =0; i < tam; i++){
         printf("%d  ", tabla[i].clave);
@@ -83,18 +83,14 @@ int main(){
      .
      
      .
-     
-     .
-     
-     case constant-expression :
-     
-     instrucciones ejecutadas si la expresión es igual al
-     
-     valor de esta expresión constante
-     
-     .
-     
-     . seleccion(tabla[],tam);
+   
+     case       : seleccion(tabla[],tam);
+    
+     case       : burbuja(tabla[],tam);
+    
+     case       : insercion(tabla[],tam);
+    
+     case       : quicksort(tabla[],tam);
      
      .
      
