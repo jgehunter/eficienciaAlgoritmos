@@ -49,7 +49,7 @@ int main(){
     /* Ordenarlo */
     
     /* quick(0,tam-1); */
-    
+    burbuja(&tabla,tam);
     
     /* Invertirlo */
     
@@ -85,17 +85,17 @@ int main(){
      
      {
      
-     case 1 : burbuja(tabla[],tam);
+     case 1 : burbuja(&tabla,tam);
     
-     case 2 : insercion(tabla[],tam);
+     case 2 : insercion(&tabla,tam);
  
-     case 3 : seleccion(tabla[],tam);
+     case 3 : seleccion(&tabla,tam);
      
-     case 4 : shell(tabla[],tam);
+     case 4 : shell(&tabla,tam);
      
-     case 5 : monticulo(tabla[],tam);
+     case 5 : monticulo(&tabla,tam);
      
-     case 6 : quicksort(tabla[],tam);
+     case 6 : quicksort(&tabla,tam);
      
     
      
