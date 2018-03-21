@@ -8,24 +8,24 @@
 #define ELEM 20
 
 
-struct lista prueba[ELEM];
+struct lista tabla[ELEM], aux;
 
 void main() {
 	srand(time(NULL));
 
 	for (int i = 0; i <= ELEM; i++) {
-		prueba[i].clave = rand();
+		tabla[i].clave = rand();
 	}
 	
 	for (int i = 0; i <= ELEM; i++) {
-		printf("\nEl numero %d es: %d", i, prueba[i].clave);
+		printf("\nEl numero %d es: %d", i, tabla[i].clave);
 	}
 
-	shell(prueba, ELEM);
+	shell(tabla, ELEM);
 
 	printf("\n");
 
 	for (int i = 0; i <= ELEM; i++) {
-		printf("\nEl numero %d es: %d", i, prueba[i].clave);
+		printf("\nEl numero %d es: %d", i, tabla[i].clave);
 	}
 }
