@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "main.h"
 
-#define ELEM 20
+#define ELEM 25
 
 
 struct lista prueba[ELEM];
