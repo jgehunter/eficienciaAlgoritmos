@@ -12,6 +12,8 @@ void shell(struct lista*, int elementos);
 
 void criba(struct lista*, int elementos);
 
+void quicksort(struct lista*, int elementos);
+
 #endif
 
 

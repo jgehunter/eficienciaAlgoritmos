@@ -21,7 +21,7 @@ void main() {
 		printf("\nEl numero %d es: %d", i, tabla[i].clave);
 	}
 
-	monticulo(tabla, ELEM);
+	quicksort(0,ELEM, tabla);
 
 	printf("\n");
 
