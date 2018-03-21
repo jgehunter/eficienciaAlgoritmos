@@ -8,6 +8,8 @@ void insercion(struct lista*, int elementos);
 
 void seleccion(struct lista*, int elementos);
 
+void shell(struct lista*, int elementos);
+
 #endif
 
 
