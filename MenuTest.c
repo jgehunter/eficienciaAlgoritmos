@@ -57,7 +57,7 @@ int main(){
     
     for (i=0; i< tam; i++)  tablainv[i]=tabla[tam-1-i];  /* rellenar la tabla inversa */
     
-    /* mostrarlo  */
+    /* mostrarlo para pruebas */
     
     for (i =0; i < tam; i++){
         printf("%d  ", tabla[i].clave);
