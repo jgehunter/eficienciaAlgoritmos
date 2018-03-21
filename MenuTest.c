@@ -95,7 +95,7 @@ int main(){
      
      case 5 : monticulo(&tabla,tam);
      
-     case 6 : quicksort(0,tam-1);
+     case 6 : quicksort(0,tam-1,0,&tabla);
      
     
      
