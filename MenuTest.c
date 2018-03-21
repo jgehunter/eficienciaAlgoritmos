@@ -2,27 +2,41 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+struct lista {
+    int clave;
+    float miembro;
+    /*  char *first_name;*/
+    /*  char *last_name;*/
+};
+
+
+void burbuja(struct lista*, int);
+
+void insercion(struct lista*, int);
+
+void seleccion(struct lista*, int);
+
+void shell(struct lista*, int);
+
+void criba(struct lista*, int);
+
+void quicksort(struct lista*, int);
+
+
+
+
+
 int main(){
     
     
     int tab, tam, alg;
     int i;
-    struct lista {
-        int clave;
-        float miembro;
-        /*  char *first_name;*/
-        /*  char *last_name;*/
-    };
-    
-
-    
-    
-    
     struct lista tabla[tam], tablaaleat[tam], tablainv[tam];
-    
     
     srand (time(NULL));
     tab=0; tam=0; alg=0;
+    
     printf("Selecciona tamaño:   \n"); /*  aqui podemos poner constantes o bien elegir el tamaño a numero */
     scanf("%d", &tam);
     
@@ -52,7 +66,7 @@ int main(){
     /* Ordenarlo */
     
     /* quick(0,tam-1); */
-    burbuja(&tabla,tam);
+    burbuja(tabla,tam);
     
     /* Invertirlo */
     
@@ -88,17 +102,17 @@ int main(){
      
      {
      
-     case 1 : burbuja(&tabla,tam);
+     case 1 : burbuja(tabla,tam);
     
-     case 2 : insercion(&tabla,tam);
+     case 2 : insercion(tabla,tam);
  
-     case 3 : seleccion(&tabla,tam);
+     case 3 : seleccion(tabla,tam);
      
-     case 4 : shell(&tabla,tam);
+     case 4 : shell(tabla,tam);
      
-     case 5 : monticulo(&tabla,tam);
+     case 5 : monticulo(tabla,tam);
      
-     case 6 : quicksort(0,tam-1,0,&tabla);
+     case 6 : quicksort(0,tam-1,0,tabla);
      
     
      
