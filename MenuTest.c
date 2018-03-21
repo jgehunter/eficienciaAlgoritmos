@@ -15,7 +15,7 @@ int main(){
     
     
     
-    struct lista tabla[tam], tablaaleat[tam], tablainv[tam], aux;
+    struct lista tabla[tam], tablaaleat[tam], tablainv[tam];
     
     
     srand (time(NULL));
@@ -49,7 +49,7 @@ int main(){
     /* Ordenarlo */
     
     /* quick(0,tam-1); */
-    
+    burbuja(&tabla,tam);
     
     /* Invertirlo */
     
@@ -73,22 +73,29 @@ int main(){
         printf("%d  ", tablainv[i].clave);
     }
     printf("\n ");
+   
+/* seleccion tabla (aqui se puede optimizar poniendolo antes de crear cosas innecesarias, mas adelante*/
+    if(tab==2){ for (i=0; i< tam; i++)  tabla[i]=tablaaleat[i];}
+    if(tab==3){ for (i=0; i< tam; i++)  tabla[i]=tablainv[i];}
+  
     
-   switch ( alg )
+/* seleccion algoritmo*/
+  
+    switch ( alg )
      
      {
      
-     case 1 : burbuja(tabla[],tam);
+     case 1 : burbuja(&tabla,tam);
     
-     case 2 : insercion(tabla[],tam);
+     case 2 : insercion(&tabla,tam);
  
-     case 3 : seleccion(tabla[],tam);
+     case 3 : seleccion(&tabla,tam);
      
-     case 4 : shell(tabla[],tam);
+     case 4 : shell(&tabla,tam);
      
-     case 5 : monticulo(tabla[],tam);
+     case 5 : monticulo(&tabla,tam);
      
-     case 6 : quicksort(tabla[],tam);
+     case 6 : quicksort(0,tam-1);
      
     
      
