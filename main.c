@@ -21,7 +21,7 @@ void main() {
 		printf("\nEl numero %d es: %d", i, prueba[i].clave);
 	}
 
-	insercion(prueba, ELEM);
+	shell(prueba, ELEM);
 
 	printf("\n");
 
