@@ -4,23 +4,23 @@
 #include "main.h"
 
 
-struct lista prueba[3];
+struct lista prueba[4];
 
 void main() {
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 4; i++) {
 		printf("Introduce un numero :");
 		scanf("%d", &prueba[i].clave);
 	}
 	
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 4; i++) {
 		printf("\nEl numero %d es: %d", i, prueba[i].clave);
 	}
 
-	burbuja(prueba, 4);
+	burbuja(prueba, 5);
 
 	printf("\n");
 
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 4; i++) {
 		printf("\nEl numero %d es: %d", i, prueba[i].clave);
 	}
 }
