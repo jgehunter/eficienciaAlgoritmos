@@ -4,5 +4,7 @@
 
 void burbuja(struct lista*, int elementos);
 
+void insercion(struct lista*, int elementos);
+
 #endif
 
