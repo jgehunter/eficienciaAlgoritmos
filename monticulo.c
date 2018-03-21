@@ -1,9 +1,9 @@
 #include "algoritmos.h"
 
-extern struct lista tabla[], aux;
 
 void criba(int iz, int de) {
 	int i, doble;
+	extern struct lista tabla[], aux;
 
 	aux = tabla[iz];
 	for (i = iz; doble = 2 * i + 1, doble <= de; i = doble) {
@@ -19,11 +19,12 @@ void criba(int iz, int de) {
 
 monticulo(struct lista tabla[], int elementos) {
 	int i;
+	struct lista aux;
 
-	for (i = (elementos/2) - 1; i >= 0; i--) {
-		criba(i, elementos - 1);
+	for (i = ((elementos+1)/2) - 1; i >= 0; i--) {
+		criba(i, (elementos+1) - 1);
 	}
-	for (i = elementos - 2; i >= 0; i--) {
+	for (i = (elementos+1) - 2; i >= 0; i--) {
 		aux = tabla[0];
 		tabla[0] = tabla[i + 1];
 		tabla[i + 1] = aux;
