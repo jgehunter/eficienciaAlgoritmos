@@ -83,18 +83,14 @@ int main(){
      .
      
      .
-     
-     .
-     
-     case constant-expression :
-     
-     instrucciones ejecutadas si la expresión es igual al
-     
-     valor de esta expresión constante
-     
-     .
-     
-     . seleccion(tabla[],tam);
+   
+     case       : seleccion(tabla[],tam);
+    
+     case       : burbuja(tabla[],tam);
+    
+     case       : insercion(tabla[],tam);
+    
+     case       : quicksort(tabla[],tam);
      
      .
      
