@@ -1,27 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-
-struct lista {
-    int clave;
-    float miembro;
-    /*  char *first_name;*/
-    /*  char *last_name;*/
-};
-
-
-void burbuja(struct lista*, int);
-
-void insercion(struct lista*, int);
-
-void seleccion(struct lista*, int);
-
-void shell(struct lista*, int);
-
-void criba(struct lista*, int);
-
-void quicksort(struct lista*, int);
+#include "main.h"
+#include "algoritmos.h"
 
 
 
@@ -112,7 +93,7 @@ int main(){
      
      case 5 : monticulo(tabla,tam);
      
-     case 6 : quicksort(0,tam-1,0,tabla);
+     case 6 : quicksort( 0,tam-1,tabla);
      
     
      

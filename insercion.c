@@ -1,7 +1,7 @@
 #include "main.h"
 #include "algoritmos.h"
 
-void insercion(struct lista tabla[], int elementos) {
+void insercion( struct lista tabla[], int elementos) {
 	int i, j;
 	struct lista aux;
 

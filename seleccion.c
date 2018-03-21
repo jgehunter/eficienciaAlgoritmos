@@ -1,7 +1,7 @@
 #include "main.h"
 #include "algoritmos.h"
 
-void seleccion(struct lista tabla[], int elementos) {
+void seleccion( struct lista tabla[], int elementos) {
 	struct lista aux;
 	int i, j, menor;
 

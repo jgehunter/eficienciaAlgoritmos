@@ -5,6 +5,8 @@
 struct lista {
 	int clave;
 	float miembro;
+    /*  char *first_name;*/
+    /*  char *last_name;*/
 };
 
 #endif

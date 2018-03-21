@@ -1,7 +1,9 @@
+#include "main.h"
 #include "algoritmos.h"
 
 
-void criba(int iz, int de) {
+
+void criba( int iz, int de) {
 	int i, doble;
 	extern struct lista tabla[], aux;
 
@@ -17,7 +19,9 @@ void criba(int iz, int de) {
 	tabla[i] = aux;
 }
 
-monticulo(struct lista tabla[], int elementos) {
+
+
+monticulo( struct lista tabla[], int elementos) {
 	int i;
 	struct lista aux;
 

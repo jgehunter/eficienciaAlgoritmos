@@ -1,6 +1,6 @@
 #include "algoritmos.h"
 
-void quicksort(int iz, int de, struct lista tabla[]) {
+void quicksort( int iz, int de, struct lista tabla[]) {
 	struct lista aux;
 	int i = iz, j = de;
 	int pivote = tabla[(i + j) / 2].clave;

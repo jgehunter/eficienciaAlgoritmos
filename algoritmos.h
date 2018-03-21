@@ -10,9 +10,11 @@ void seleccion(struct lista*, int elementos);
 
 void shell(struct lista*, int elementos);
 
-void criba(struct lista*, int elementos);
+void criba( int, int);
 
-void quicksort(struct lista*, int elementos);
+void monticulo(struct lista*, int elementos);
+
+void quicksort( int, int, struct lista*);
 
 #endif
 
