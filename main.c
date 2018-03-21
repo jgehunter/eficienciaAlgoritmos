@@ -3,16 +3,17 @@
 #include <stdio.h>
 #include "main.h"
 
+#define ELEM 20
 
-struct lista prueba[4];
+
+struct lista prueba[ELEM];
 
 void main() {
-	for (int i = 0; i <= 4; i++) {
-		printf("Introduce un numero :");
-		scanf("%d", &prueba[i].clave);
+	for (int i = 0; i <= ELEM; i++) {
+		prueba[i].clave = ELEM - i;
 	}
 	
-	for (int i = 0; i <= 4; i++) {
+	for (int i = 0; i <= ELEM; i++) {
 		printf("\nEl numero %d es: %d", i, prueba[i].clave);
 	}
 
@@ -20,7 +21,7 @@ void main() {
 
 	printf("\n");
 
-	for (int i = 0; i <= 4; i++) {
+	for (int i = 0; i <= ELEM; i++) {
 		printf("\nEl numero %d es: %d", i, prueba[i].clave);
 	}
 }
