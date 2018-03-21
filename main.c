@@ -21,7 +21,7 @@ void main() {
 		printf("\nEl numero %d es: %d", i, tabla[i].clave);
 	}
 
-	shell(tabla, ELEM);
+	monticulo(tabla, ELEM);
 
 	printf("\n");
 
