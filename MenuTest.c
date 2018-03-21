@@ -15,7 +15,7 @@ int main(){
     
     
     
-    struct lista tabla[tam], tablaaleat[tam], tablainv[tam], aux;
+    struct lista tabla[tam], tablaaleat[tam], tablainv[tam];
     
     
     srand (time(NULL));
@@ -93,9 +93,9 @@ int main(){
      
      case 4 : shell(&tabla,tam);
      
-     case 5 : monticulo(&tabla,tam);
+     case 5 : monticulo(0,tam-1);
      
-     case 6 : quicksort(&tabla,tam);
+     case 6 : quicksort(0,tam-1);
      
     
      
