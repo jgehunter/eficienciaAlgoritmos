@@ -11,6 +11,12 @@ struct lista {
 
 #ifdef _WIN32
 #include "timeWindows.h"
+#elif 
+#defined(_APPLE_)
+#include "timeApple.h"
+#elif
+#defined(_linux_)
+#include "timeLinux.h"
 #else
 #error "SO no permitido"
 #endif
