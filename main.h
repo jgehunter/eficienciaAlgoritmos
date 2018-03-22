@@ -9,4 +9,10 @@ struct lista {
     /*  char *last_name;*/
 };
 
+#ifdef _WIN32
+#include "timeWindows.h"
+#else
+#error "SO no permitido"
+#endif
+
 #endif

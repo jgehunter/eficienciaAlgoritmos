@@ -5,7 +5,7 @@
 #include "main.h"
 #include "algoritmos.h"
 
-#define ELEM 10
+#define ELEM 10000
 
 
 struct lista tabla[ELEM];
@@ -17,106 +17,70 @@ void main() {
 		tabla[i].clave = rand();
 	}
 	
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
-	
+
+	startTimer();
+
 	burbuja(tabla, ELEM);
 
-	printf("\n");
+	
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
-
-	printf("\nBurbuja\n");
+	printf("\nBurbuja ha tardado %lld micros\n", tiempoPasado());
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
 	}
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
+	
 
-	printf("\n");
-
+	startTimer();
 	insercion(tabla, ELEM);
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
+	
 
-	printf("\nInsercion\n");
+
+	printf("\nInsercion ha tardado %lld micros\n", tiempoPasado());
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
 	}
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
+	
 
-	printf("\n");
-
+	startTimer();
 	monticulo(tabla, ELEM);
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
-	printf("\nMonticulo\n");
+	printf("\nMonticulo ha tardado %lld micros\n", tiempoPasado());
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
 	}
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
+	
 
-	printf("\n");
-
+	startTimer();
 	quicksort(0, ELEM-1, tabla);
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
 
-	printf("\nQuicksort\n");
+
+	printf("\nQuicksort ha tardado %lld micros\n", tiempoPasado());
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
 	}
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
 
-	printf("\n");
-
+	startTimer();
 	seleccion(tabla, ELEM);
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
 
-	printf("\nSeleccion\n");
+	printf("\nSeleccion ha tardado %lld micros\n", tiempoPasado());
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
 	}
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
-
-	printf("\n");
-
+	startTimer();
 	shell(tabla, ELEM);
 
-	for (int i = 0; i <= ELEM; i++) {
-		printf("%d ", tabla[i].clave);
-	}
-
-	printf("\nShell");
+	printf("\nShell ha tardado %lld micros", tiempoPasado());
 }
