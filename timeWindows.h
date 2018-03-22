@@ -3,7 +3,7 @@
 
 #include <Windows.h>
 
-extern long long tcounter, freq, tick_value;
+extern LARGE_INTEGER tcounter, freq, tick_value;
 
 void startTimer();
 
