@@ -12,7 +12,7 @@ struct lista {
 #ifdef _WIN32
 #include "timeWindows.h"
 #else
-#error "SO no permitido"
+   #error "SO no permitido"
 #endif
 
 #endif
