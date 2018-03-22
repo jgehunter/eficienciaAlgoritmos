@@ -12,7 +12,7 @@ void shell(struct lista*, int);
 
 void criba( int, int);
 
-void monticulo( struct lista*, int);
+void monticulo(struct lista*, int);
 
 void quicksort( int, int, struct lista*);
 

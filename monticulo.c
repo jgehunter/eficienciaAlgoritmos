@@ -3,9 +3,9 @@
 
 
 
-void criba( int iz, int de) {
+void criba( int iz, int de, struct lista tabla[]) {
 	int i, doble;
-	extern struct lista tabla[], aux;
+	struct lista aux;
 
 	aux = tabla[iz];
 	for (i = iz; doble = 2 * i + 1, doble <= de; i = doble) {
@@ -26,12 +26,12 @@ void monticulo( struct lista tabla[] , int elementos) {
 	struct lista aux;
 
 	for (i = ((elementos+1)/2) - 1; i >= 0; i--) {
-		criba(i, (elementos+1) - 1);
+		criba(i, (elementos+1) - 1, tabla);
 	}
 	for (i = (elementos+1) - 2; i >= 0; i--) {
 		aux = tabla[0];
 		tabla[0] = tabla[i + 1];
 		tabla[i + 1] = aux;
-		criba(0, i);
+		criba(0, i, tabla);
 	}
 }
