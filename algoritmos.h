@@ -10,7 +10,7 @@ void seleccion(struct lista*, int);
 
 void shell(struct lista*, int);
 
-void criba( int, int);
+void criba(int, int, struct lista*);
 
 void monticulo(struct lista*, int);
 
