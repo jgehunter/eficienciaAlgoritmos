@@ -40,6 +40,7 @@ int main(){
     }
     
     /* mostrarlo para pruebas */
+    printf(" tabla generada:\n ");
     for (i =0; i < tam; i++){
         printf(" %d  ", tabla[i].clave);
     }
@@ -48,12 +49,11 @@ int main(){
     
     
     if(tab!=2){
-                 burbuja(tabla,tam); /* Ordenarlo */
+            insercion(tabla,tam-1);   /* Ordenarlo */
        
         if(tab==3){                  /* Invertirlo */
     
-            for (i=0; i< tam; i++)  tablainv[i]=tabla[i];
-            
+            for (i=0; i< tam; i++)  tablainv[i]=tabla[i]; /* Usando tabla auxiliar */
             for (i=0; i< tam; i++)  tabla[i]=tablainv[tam-1-i];
             
              }
@@ -62,8 +62,9 @@ int main(){
         
     
     
-    /* mostrarlo para pruebas */
-   for (i =0; i < tam; i++){
+    /* mostrarlo tabla con la que trabajo */
+    printf("tabla a trabajar:\n ");
+    for (i =0; i < tam; i++){
         printf(" %d  ", tabla[i].clave);
     }
     printf("\n ");
@@ -86,15 +87,15 @@ int main(){
      
      {
      
-     case 1 : burbuja(tabla,tam);
+     case 1 : burbuja(tabla,tam-1);
     
-     case 2 : insercion(tabla,tam);
+     case 2 : insercion(tabla,tam-1);
  
-     case 3 : seleccion(tabla,tam);
+     case 3 : seleccion(tabla,tam-1);
      
-     case 4 : shell(tabla,tam);
+     case 4 : shell(tabla,tam-1);
      
-     case 5 : monticulo(tabla,tam);
+     case 5 : monticulo(tabla,tam-1);
      
      case 6 : quicksort( 0,tam-1,tabla);
      
@@ -104,9 +105,9 @@ int main(){
      
      }
     
-    
+    printf("tabla resultado:\n ");
     for (i =0; i < tam; i++){
-        printf("%d  ", tabla[i].clave);
+        printf(" %d  ", tabla[i].clave);
     }
     printf("\n ");
     
