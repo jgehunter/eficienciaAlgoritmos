@@ -13,7 +13,7 @@ int main(){
     
     int tab, tam, alg;
     int i;
-    struct lista tabla[tam], tablaaleat[tam], tablainv[tam];
+     /*struct lista tabla[tam], tablainv[tam];*/
     
     srand (time(NULL));
     tab=0; tam=0; alg=0;
@@ -30,52 +30,56 @@ int main(){
     
    
     printf("Seleccionado: tamaño=%d, tabla= %d, algoritmo=%d \n", tam, tab, alg);
+   
     
+    struct lista tabla[tam],tablainv[tam];  /* CREO QUE NO ES CORRECTO PONERLO AQUI  */
     
     /* obtencion claves aleatorio  */
     for (i=0; i < tam; i++){
         tabla[i].clave = rand() % (10*tam)+ 1;
     }
     
-    for (i=0; i < tam; i++){             /* rellenar la tabla aleatoria */
-       tablaaleat[i]=tabla[i];
-    }
-    
-    
-    
-    
-    /* Ordenarlo */
-    
-    /* quick(0,tam-1); */
-    burbuja(tabla,tam);
-    
-    /* Invertirlo */
-    
-    for (i=0; i< tam; i++)  tablainv[tam]=tabla[i];
-    
-    for (i=0; i< tam; i++)  tablainv[i]=tabla[tam-1-i];  /* rellenar la tabla inversa */
-    
     /* mostrarlo para pruebas */
-    
+    printf(" tabla generada:\n ");
     for (i =0; i < tam; i++){
-        printf("%d  ", tabla[i].clave);
+        printf(" %d  ", tabla[i].clave);
     }
     printf("\n ");
     
-    for (i =0; i < tam; i++){
-        printf("%d  ", tablaaleat[i].clave);
-    }
-    printf("\n ");
     
-    for (i =0; i <tam; i++){
-        printf("%d  ", tablainv[i].clave);
+    
+    if(tab!=2){
+            insercion(tabla,tam-1);   /* Ordenarlo */
+       
+        if(tab==3){                  /* Invertirlo */
+    
+            for (i=0; i< tam; i++)  tablainv[i]=tabla[i]; /* Usando tabla auxiliar */
+            for (i=0; i< tam; i++)  tabla[i]=tablainv[tam-1-i];
+            
+             }
+  
+    }
+        
+    
+    
+    /* mostrarlo tabla con la que trabajo */
+    printf("tabla a trabajar:\n ");
+    for (i =0; i < tam; i++){
+        printf(" %d  ", tabla[i].clave);
     }
     printf("\n ");
    
-/* seleccion tabla (aqui se puede optimizar poniendolo antes de crear cosas innecesarias, mas adelante*/
-    if(tab==2){ for (i=0; i< tam; i++)  tabla[i]=tablaaleat[i];}
-    if(tab==3){ for (i=0; i< tam; i++)  tabla[i]=tablainv[i];}
   
+    
+    
+    
+/* seleccion tabla (aqui se puede optimizar poniendolo antes de crear cosas innecesarias, mas adelante*/
+    
+   
+  
+    
+    
+    
     
 /* seleccion algoritmo*/
   
@@ -83,15 +87,15 @@ int main(){
      
      {
      
-     case 1 : burbuja(tabla,tam);
+     case 1 : burbuja(tabla,tam-1);
     
-     case 2 : insercion(tabla,tam);
+     case 2 : insercion(tabla,tam-1);
  
-     case 3 : seleccion(tabla,tam);
+     case 3 : seleccion(tabla,tam-1);
      
-     case 4 : shell(tabla,tam);
+     case 4 : shell(tabla,tam-1);
      
-     case 5 : monticulo(tabla,tam);
+     case 5 : monticulo(tabla,tam-1);
      
      case 6 : quicksort( 0,tam-1,tabla);
      
@@ -101,6 +105,11 @@ int main(){
      
      }
     
+    printf("tabla resultado:\n ");
+    for (i =0; i < tam; i++){
+        printf(" %d  ", tabla[i].clave);
+    }
+    printf("\n ");
     
     return 0;
 }

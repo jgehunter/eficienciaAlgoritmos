@@ -16,7 +16,7 @@ struct lista {
 #elif defined(_linux_)
 #include "timeLinux.h"
 #else
-#error "SO no permitido"
+   #error "SO no permitido"
 #endif
 
 #endif
