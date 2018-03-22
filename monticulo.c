@@ -21,7 +21,7 @@ void criba( int iz, int de) {
 
 
 
-monticulo( struct lista tabla[] , int elementos) {
+void monticulo( struct lista tabla[] , int elementos) {
 	int i;
 	struct lista aux;
 
