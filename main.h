@@ -11,7 +11,7 @@ struct lista {
 
 #ifdef _WIN32
 #include "timeWindows.h"
-#elif defined(_APPLE_)
+#elif defined(_MACH_)
 #include "timeApple.h"
 #elif defined(_linux_)
 #include "timeLinux.h"
