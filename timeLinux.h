@@ -1,3 +1,4 @@
+#ifdef _linux_
 #ifndef TIME_LINUX_H
 #define TIME_LINUX_H
 
@@ -7,4 +8,5 @@ void startTimer();
 
 long long tiempoPasado();
 
+#endif
 #endif

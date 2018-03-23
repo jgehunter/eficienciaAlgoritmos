@@ -19,17 +19,6 @@ struct lista {
    #error "SO no permitido"
 #endif*/
 
-#ifdef _WIN32
-#include "timeWindows.h"
-#endif
-
-#ifdef _MACH_
-#include "timeApple.h"
-#endif
-
-#ifdef _linux_
-#include "timeLinux.h"
-#endif
 
 
 

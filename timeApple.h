@@ -1,3 +1,5 @@
+#ifdef _MACH_
+
 #ifndef TIME_APPLE_H
 #define TIME_APPLE_H
 
@@ -7,4 +9,5 @@ void startTimer();
 
 long long tiempoPasado();
 
+#endif
 #endif

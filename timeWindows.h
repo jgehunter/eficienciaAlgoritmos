@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #ifndef TIME_WINDOWS_H
 #define TIME_WINDOWS_H
 
@@ -9,4 +11,5 @@ void startTimer();
 
 long long tiempoPasado();
 
+#endif
 #endif
