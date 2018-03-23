@@ -5,9 +5,9 @@
 
 extern long long tcounter, freq, tick_value;
 
-void startTimer();
+void startTimer(void);
 
-long long tiempoPasado();
+long long tiempoPasado(void);
 
 #endif
 #endif
