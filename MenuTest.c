@@ -21,9 +21,15 @@ int main(){
     
     printf("Selecciona tabla: \n 1.ordenado \n 2.aleatorio\n 3.inverso   \n"); /* elegir entre ordenado inverso aleatorio   */
     scanf("%d", &tab);
+    while(tab!=1 && tab!=2 && tab!=3){
+        printf("Seleccion incorrecta, prueba otra vez\n");
+        scanf("%d", &tab);}
     
     printf("Selecciona algoritmo: \n 1.Burbuja\n 2.Inserción\n 3.Selección\n 4.Shell\n 5.Montículo\n 6.Quicksort \n");
     scanf("%d", &alg);
+    while(alg!=1 && alg!=2 && alg!=3 && alg!=4 && alg!=5 && alg!=6){
+        printf("Seleccion incorrecta, prueba otra vez\n");
+        scanf("%d", &alg);}
     
     
    
@@ -77,8 +83,7 @@ int main(){
   
     
     
-    startTimer();
-    
+
 
     
 
@@ -107,8 +112,7 @@ int main(){
      
      }
     
-    
-    tiempoPasado();
+
     
     
     printf("tabla resultado:\n ");
