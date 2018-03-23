@@ -85,8 +85,7 @@ int main(){
   
     
     
- /*startTimer();*/
-    
+
 
     
 
@@ -115,8 +114,7 @@ int main(){
      
      }
     
-    
-   /* tiempoPasado(); */
+
     
     
     printf("tabla resultado:\n ");
