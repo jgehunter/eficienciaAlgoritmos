@@ -1,4 +1,4 @@
-#ifdef _MACH_
+#ifdef __APPLE__
 
 #ifndef TIME_APPLE_H
 #define TIME_APPLE_H
