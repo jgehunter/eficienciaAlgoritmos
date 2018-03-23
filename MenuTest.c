@@ -3,9 +3,7 @@
 #include <time.h>
 #include "main.h"
 #include "algoritmos.h"
-#include "timeWindows.h"
-#include "timeApple.h"
-#include "timeLinux.h"
+
 
 
 int main(){
