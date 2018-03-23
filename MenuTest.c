@@ -79,7 +79,11 @@ int main(){
   
     
     
+ startTimer();
     
+
+    
+
     
 /* seleccion algoritmo*/
   
@@ -104,6 +108,10 @@ int main(){
      break;
      
      }
+    
+    
+    tiempoPasado();
+    
     
     printf("tabla resultado:\n ");
     for (i =0; i < tam; i++){

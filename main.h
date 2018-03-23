@@ -23,11 +23,11 @@ struct lista {
 #include "timeWindows.h"
 #endif
 
-#ifdef _MACH
+#ifdef _MACH_
 #include "timeApple.h"
 #endif
 
-#ifdef _linux
+#ifdef _linux_
 #include "timeLinux.h"
 #endif
 
