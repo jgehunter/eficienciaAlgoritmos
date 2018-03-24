@@ -19,7 +19,7 @@ long long usecs;
 #elif defined(__APPLE__)
 uint64_t freq_num, freq_denom, tick_value, prev_tick_value;
 #elif defined(__linux__)
-long long prevTime, time;
+long long prevTime, timeSpent;
 #endif
 
 void startTimer() {
@@ -75,11 +75,11 @@ long long getTime() {
 	struct timespec ts;
 
 	if (clock_gettime(CLOCK_MONOTONIC, &ts) == 0)
-		time = (long long)(ts.tv_sec * 1000000 + ts.tv_nsec / 1000);
+		timeSpent = (long long)(ts.tv_sec * 1000000 + ts.tv_nsec / 1000);
 	else
 		prevTime = 0;
 
-	long long timeDiff = time - prevTime;
+	long long timeDiff = timeSpent - prevTime;
 
 	return timeDiff/1000;
 #endif

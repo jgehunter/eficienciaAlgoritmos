@@ -10,6 +10,8 @@
 
 struct lista tabla[ELEM];
 
+long long tiempoPasado;
+
 void main() {
 	srand(time(NULL));
 
@@ -23,8 +25,9 @@ void main() {
 	burbuja(tabla, ELEM);
 
 	
+	tiempoPasado = getTime();
 
-	printf("\nBurbuja ha tardado %lld micros\n", tiempoPasado());
+	printf("\nBurbuja ha tardado %lld ms\n", tiempoPasado);
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
@@ -37,8 +40,8 @@ void main() {
 
 	
 
-
-	printf("\nInsercion ha tardado %lld micros\n", tiempoPasado());
+	tiempoPasado = getTime();
+	printf("\nInsercion ha tardado %lld ms\n", tiempoPasado);
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
@@ -49,7 +52,8 @@ void main() {
 	startTimer();
 	monticulo(tabla, ELEM);
 
-	printf("\nMonticulo ha tardado %lld micros\n", tiempoPasado());
+	tiempoPasado = getTime();
+	printf("\nMonticulo ha tardado %lld ms\n", tiempoPasado);
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
@@ -61,8 +65,8 @@ void main() {
 	quicksort(0, ELEM-1, tabla);
 
 
-
-	printf("\nQuicksort ha tardado %lld micros\n", tiempoPasado());
+	tiempoPasado = getTime();
+	printf("\nQuicksort ha tardado %lld ms\n", tiempoPasado);
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
@@ -72,8 +76,8 @@ void main() {
 	startTimer();
 	seleccion(tabla, ELEM);
 
-
-	printf("\nSeleccion ha tardado %lld micros\n", tiempoPasado());
+	tiempoPasado = getTime();
+	printf("\nSeleccion ha tardado %lld micros\n", tiempoPasado);
 
 	for (int i = 0; i <= ELEM; i++) {
 		tabla[i].clave = rand();
@@ -82,5 +86,6 @@ void main() {
 	startTimer();
 	shell(tabla, ELEM);
 
-	printf("\nShell ha tardado %lld micros", tiempoPasado());
+	tiempoPasado = getTime();
+	printf("\nShell ha tardado %lld micros", tiempoPasado);
 }

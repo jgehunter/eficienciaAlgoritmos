@@ -15,7 +15,7 @@ extern uint64_t freq_num, freq_denom, tick_value, prev_tick_value;
 #include <time.h>
 #include <sys/time.h>
 #include <stdint.h>
-extern long long prevTime, time;
+extern long long prevTime, timeSpent;
 #endif
 
 void startTimer();
