@@ -1,6 +1,6 @@
 /*
 *	FICHERO: algoritmos.c
-*	AUTORES: Jorge Hunter	I–aki Echevarr’a JosŽ Miguel Hervas
+*	AUTORES: Jorge Hunter   I–aki Echevarr’a    JosŽ Miguel Hervas
 *
 *	Distintos algoritmos que se utilizan para la ordenaci—n de tablas
 */
@@ -13,11 +13,11 @@
 // Inputs: puntero struct lista que apunta al comienzo de la tabla y int que
 //		   contiene el nœmero de elementos en la tabla
 //
-// Outputs: la función opera sobre la tabla y la ordena
+// Outputs: la funci—n opera sobre la tabla y la ordena
 //
 // Se van comparando elementos adyacentes de dos en dos y si estan desordenados
 // se intercambian. Cada vez que se completa este proceso a lo largo de toda la
-// tabla el menor índice queda colocado por lo que repitiendo varias veces el
+// tabla el menor êndice queda colocado por lo que repitiendo varias veces el
 // proceso se ordena la tabla
 void burbuja(struct lista tabla[], int elementos) 
 {
@@ -34,7 +34,7 @@ void burbuja(struct lista tabla[], int elementos)
 	}
 }
 
-// La función ordena una tabla por inserción
+// La funci—n ordena una tabla por inserci—n
 //
 // Inputs: puntero struct lista que apunta al comienzo de la tabla y int que
 //		   contiene el número de elementos en la tabla
@@ -42,9 +42,9 @@ void burbuja(struct lista tabla[], int elementos)
 // Outputs: la función opera sobre la tabla y la ordena
 //
 // Se comienza con un conjunto formado por el primer elemento que, claramente,
-// está ordenado y se va añadiendo elementos al conjunto de uno en uno
-// comparandolos con todos los elementos anteriores y insertándolos en la
-// posición que les corresponde
+// está ordenado y se va a–adiendo elementos al conjunto de uno en uno
+// comparandolos con todos los elementos anteriores y insert‡ndolos en la
+// posici—n que les corresponde
 
 void insercion(struct lista tabla[], int elementos) 
 {
@@ -65,15 +65,15 @@ void insercion(struct lista tabla[], int elementos)
 
 }
 
-// La función ordena una tabla por selección
+// La funci—n ordena una tabla por selección
 //
 // Inputs: puntero struct lista que apunta al comienzo de la tabla y int que
-//		   contiene el número de elementos en la tabla
+//		   contiene el nœmero de elementos en la tabla
 //
-// Outputs: la función opera sobre la tabla y la ordena
+// Outputs: la funci—n opera sobre la tabla y la ordena
 //
 // Se recorren todos los elementos de la tabla hasta encontrar el menor, que se
-// coloca en la primera posición y se vuelve a repetir el proceso sin usar
+// coloca en la primera posici—n y se vuelve a repetir el proceso sin usar
 // los elementos ya seleccionados hasta que queda ordenada la tabla
 
 void seleccion(struct lista tabla[], int elementos) 
@@ -96,13 +96,13 @@ void seleccion(struct lista tabla[], int elementos)
 	}
 }
 
-// La función proporciona el numero de pasos que le corresponde a cierto tamaño
+// La funci—n proporciona el numero de pasos que le corresponde a cierto tama–o
 //
-// Inputs: int que contiene el tamaño de la tabla
+// Inputs: int que contiene el tama–o de la tabla
 //
-// Outputs: int que contiene el número de pasos correspondientes
+// Outputs: int que contiene el nœmero de pasos correspondientes
 //
-// Nos basamos en el tamaño de los pasos propuesto por Ciura derivado 
+// Nos basamos en el tama–o de los pasos propuesto por Ciura derivado
 // experimentalmente
 
 int calcularPasos(int tam)
