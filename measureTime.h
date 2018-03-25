@@ -20,7 +20,7 @@ extern LARGE_INTEGER tick_value;
 extern LARGE_INTEGER prev_tick_value;
 extern long long usecs;
 #elif defined(__APPLE__)
-#include "timeApple.h"
+/*#include "timeApple.h"*/
 #include <mach/mach_time.h>
 #include <stdint.h>
 extern uint64_t freq_num;
