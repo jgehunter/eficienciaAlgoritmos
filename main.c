@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "funciones.h"
 #include "main.h"
 #include "algoritmos.h"
@@ -55,14 +56,14 @@ int main()
 	// para ordenar la tabla.
 	do {
 		printf("Selecciona el algoritmo: \n 1.Burbuja \n 2.Insercion \n");
-		printf("3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n");
+		printf(" 3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n");
 		fgets(input, sizeof(input), stdin);
 		tipAlg = strtol(input, &tmp, 10);
 		memset(input, 0, sizeof(input));
 	} while ((tipAlg != 1) && (tipAlg != 2) && (tipAlg != 3) &&
 			(tipAlg != 4) && (tipAlg != 5) && (tipAlg != 6));
     
-    printf("Seleccionado: elementos = %d, tabla = %d, algoritmo = %d \n",
+    printf("Seleccionado: elementos = %ld, tabla = %ld, algoritmo = %ld \n",
 	tamTabla, ordTabla, tipAlg);
 
 	tabla = malloc(tamTabla * sizeof(struct lista)); 
