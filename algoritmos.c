@@ -1,6 +1,6 @@
 /*
 *	FICHERO: algoritmos.c
-*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*	AUTORES: Jorge Hunter    I–aki Echevarr’a    JosŽ Miguel Herv‡s
 *
 *	Distintos algoritmos que se utilizan para la ordenación de tablas.
 */

@@ -1,6 +1,6 @@
 /*
 *	FICHERO: measureTime.h
-*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*	AUTORES: Jorge Hunter    I–aki Echevarr’a    JosŽ Miguel Herv‡s
 *
 *	El fichero contiene la definición de las variable y las funciones que se
 *   usan para medir el tiempo que tardan en ejecutarse los algoritmos

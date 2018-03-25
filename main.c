@@ -68,10 +68,12 @@ int main()
 
 	tabla = malloc(tamTabla * sizeof(struct lista)); 
 	crearTabla(tabla, ordTabla, tamTabla);
-	startTimer();
+	
+    startTimer();
 	ordenarTabla(tabla, tamTabla, tipAlg);
 	micros = getTime();
-	printf("Ha tardado %lld microsegundos\n", micros);
+	
+    printf("Ha tardado %lld microsegundos\n", micros);
 	free(tabla);
 	
 	return 0;

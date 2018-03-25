@@ -1,6 +1,6 @@
 /*
 *	FICHERO: algoritmos.h
-*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*	AUTORES: Jorge Hunter    I–aki Echevarr’a    JosŽ Miguel Herv‡s
 *
 *	El fichero contiene los algoritmos que vamos a utilizar para ordenar la
 *   tabla.

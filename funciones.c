@@ -1,6 +1,6 @@
 /*
 *	FICHERO: funciones.c
-*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*	AUTORES: Jorge Hunter    I–aki Echevarr’a    JosŽ Miguel Herv‡s
 *
 *	Funciones que se utilizan en el fichero "main.c".
 */
