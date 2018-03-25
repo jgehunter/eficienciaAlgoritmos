@@ -20,18 +20,19 @@
 #include "algoritmos.h"
 #include "measureTime.h"
 
+
 int main()
 {
-	long tamTabla;				// Tamaño de la tabla
-	long ordTabla;				// Tipo de ordenación de la tabla
-	long tipAlg;				// Tipo de algoritmo de ordenación
-	long long micros;			// Tiempor que tarda en microsegundos
-	struct lista *tabla;		// Tabla a ordenar
-	char input[256];			// Lectura del input del usuario
+	long tamTabla;				// Tamaño de la tabla.
+	long ordTabla;				// Tipo de ordenación de la tabla.
+	long tipAlg;				// Tipo de algoritmo de ordenación.
+	long long micros;			// Tiempor que tarda en microsegundos.
+	struct lista *tabla;		// Tabla a ordenar.
+	char input[256];			// Lectura del input del usuario.
 	char *tmp;					
 
 	// Se pide al usuario que introduzca el tamaño de la tabla, que debe ser
-	// un entero mayor que 0 y menor MAX_TABLA
+	// un entero mayor que 0 y menor MAX_TABLA.
 	do {
 		printf("Selecciona el numero de elementos de la tabla: ");
 		fgets(input, sizeof(input), stdin);
@@ -41,7 +42,7 @@ int main()
 
 	// Se pide al usuario que introduzca como quiere que esté preordenada la
 	// tabla: ordenada de menor a mayor, ordenada de mayor a menor o de forma
-	// aleatoria
+	// aleatoria.
 	do {
 		printf("Selecciona la ordenacion de la tabla: \n 1.Ordenada");
 		printf(" \n 2.Inversa \n 3.Aleatoria \n");
@@ -51,7 +52,7 @@ int main()
 	} while ((ordTabla != 1) && (ordTabla != 2) && (ordTabla != 3));
 
 	// Se pide al usuario que introduzca el algoritmo que quiere utilizar
-	// para ordenar la tabla
+	// para ordenar la tabla.
 	do {
 		printf("Selecciona el algoritmo: \n 1.Burbuja \n 2.Insercion \n");
 		printf("3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n");

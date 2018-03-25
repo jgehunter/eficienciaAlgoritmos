@@ -1,8 +1,16 @@
+/*
+*	FICHERO: funciones.c
+*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*
+*	Funciones que se utilizan en el fichero "main.c".
+*/
+
 #include "main.h"
 #include "funciones.h"
 #include "algoritmos.h"
 #include <time.h>
 #include <stdlib.h>
+
 
 void mezclar(struct lista *tabla, long tamTabla) 
 {
