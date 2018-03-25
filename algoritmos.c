@@ -1,17 +1,17 @@
 /*
 *	FICHERO: algoritmos.c
-*	AUTORES: Jorge Hunter	Iñaki Echevarría José Miguel Hervás
+*	AUTORES: Jorge Hunter	I–aki Echevarr’a JosŽ Miguel Hervas
 *
-*	Distintos algoritmos que se utilizan para la ordenación de tablas
+*	Distintos algoritmos que se utilizan para la ordenaci—n de tablas
 */
 
 #include "main.h"
 #include "algoritmos.h"
 
-// La función ordena una tabla utilizando el método de la burbuja
+// La funci—n ordena una tabla utilizando el mŽtodo de la burbuja
 //
 // Inputs: puntero struct lista que apunta al comienzo de la tabla y int que
-//		   contiene el número de elementos en la tabla
+//		   contiene el nœmero de elementos en la tabla
 //
 // Outputs: la función opera sobre la tabla y la ordena
 //
