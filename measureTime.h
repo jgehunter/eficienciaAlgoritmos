@@ -1,6 +1,6 @@
 /*
 *	FICHERO: measureTime.h
-*	AUTORES: Jorge Hunter	Iñaki Echevarría	José Miguel Hervás
+*	AUTORES: Jorge Hunter    I–aki Echevarr’a    JosŽ Miguel Herv‡s
 *
 *	El fichero contiene la definición de las variable y las funciones que se
 *   usan para medir el tiempo que tardan en ejecutarse los algoritmos
@@ -20,7 +20,7 @@ extern LARGE_INTEGER tick_value;
 extern LARGE_INTEGER prev_tick_value;
 extern long long usecs;
 #elif defined(__APPLE__)
-#include "timeApple.h"
+/*#include "timeApple.h"*/
 #include <mach/mach_time.h>
 #include <stdint.h>
 extern uint64_t freq_num;
