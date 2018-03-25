@@ -35,7 +35,7 @@ int main()
 	// Se pide al usuario que introduzca el tamaño de la tabla, que debe ser
 	// un entero mayor que 0 y menor MAX_TABLA.
 	do {
-		printf("Selecciona el numero de elementos de la tabla: ");
+		printf("Selecciona el numero de elementos de la tabla: \n");
 		fgets(input, sizeof(input), stdin);
 		tamTabla = strtol(input, &tmp, 10);
 		memset(input, 0, sizeof(input));
@@ -69,11 +69,22 @@ int main()
 	tabla = malloc(tamTabla * sizeof(struct lista)); 
 	crearTabla(tabla, ordTabla, tamTabla);
 	
+    /* mostrarlo para pruebas */
+    for (int i =0; i < tamTabla; i++) printf("%d  ", tabla[i].clave);
+    printf("\n ");
+    
+    
     startTimer();
 	ordenarTabla(tabla, tamTabla, tipAlg);
 	micros = getTime();
-	
-    printf("Ha tardado %lld microsegundos\n", micros);
+   
+    
+    /* mostrarlo para pruebas */
+    for (int i =0; i < tamTabla; i++) printf("%d  ", tabla[i].clave);
+    printf("\n ");
+    
+    
+    printf("\n Ha tardado %lld microsegundos\n", micros);
 	free(tabla);
 	
 	return 0;
