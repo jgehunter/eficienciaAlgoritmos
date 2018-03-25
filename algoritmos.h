@@ -8,6 +8,8 @@ void insercion(struct lista*, int);
 
 void seleccion(struct lista*, int);
 
+int calcularPasos(int);
+
 void shell(struct lista*, int);
 
 void criba(int, int, struct lista*);

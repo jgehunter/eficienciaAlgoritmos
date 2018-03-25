@@ -56,7 +56,7 @@ long long getTime() {
 		tick_value = tcounter;
 	}
 
-	usecs = (tick_value.QuadPart - prev_tick_value.QuadPart) / (freq.QuadPart / 1000);
+	usecs = (tick_value.QuadPart - prev_tick_value.QuadPart) / (freq.QuadPart / 1000000);
 
 	return usecs;
 #elif defined(__APPLE__)
@@ -70,7 +70,7 @@ long long getTime() {
 	value_diff *= freq_num;
 	value_diff /= freq_denom;
 
-	return (long long)(value_diff/1000);
+	return (long long)(value_diff);
 #elif defined(__linux__)
 	struct timespec ts;
 
@@ -81,7 +81,7 @@ long long getTime() {
 
 	long long timeDiff = timeSpent - prevTime;
 
-	return timeDiff/1000;
+	return timeDiff;
 #endif
 }
 	
