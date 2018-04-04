@@ -32,55 +32,20 @@ int main()
 	char input[256];			// Lectura del input del usuario.
 	char *tmp;					
 
-	do {
-		// Se pide al usuario que introduzca el tamaño de la tabla, que debe ser
-		// un entero mayor que 0 y menor MAX_TABLA.
-		do {
-			printf("Selecciona el numero de elementos de la tabla: ");
-			fgets(input, sizeof(input), stdin);
-			tamTabla = strtol(input, &tmp, 10);
-			memset(input, 0, sizeof(input));
-		} while ((tamTabla <= 0) || (tamTabla > MAX_TABLA));
-
-		// Se pide al usuario que introduzca como quiere que esté preordenada la
-		// tabla: ordenada de menor a mayor, ordenada de mayor a menor o de forma
-		// aleatoria.
-		do {
-			printf("Selecciona la ordenacion de la tabla: \n 1.Ordenada");
-			printf(" \n 2.Inversa \n 3.Aleatoria \n");
-			fgets(input, sizeof(input), stdin);
-			ordTabla = strtol(input, &tmp, 10);
-			memset(input, 0, sizeof(input));
-		} while ((ordTabla != 1) && (ordTabla != 2) && (ordTabla != 3));
-
-		// Se pide al usuario que introduzca el algoritmo que quiere utilizar
-		// para ordenar la tabla.
-		do {
-			printf("Selecciona el algoritmo: \n 1.Burbuja \n 2.Insercion \n");
-			printf(" 3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n");
-			fgets(input, sizeof(input), stdin);
-			tipAlg = strtol(input, &tmp, 10);
-			memset(input, 0, sizeof(input));
-		} while ((tipAlg != 1) && (tipAlg != 2) && (tipAlg != 3) &&
-			(tipAlg != 4) && (tipAlg != 5) && (tipAlg != 6));
-
-		printf("Seleccionado: elementos = %ld, tabla = %ld, algoritmo = %ld \n",
-			tamTabla, ordTabla, tipAlg);
-
+    ordTabla = 1;
+    tipAlg = 1;
+    
+    for(tamTabla=0; tamTabla<250; tamTabla=tamTabla+5){
+        
 		tabla = malloc(tamTabla * sizeof(struct lista));
 		crearTabla(tabla, ordTabla, tamTabla);
 		startTimer();
 		ordenarTabla(tabla, tamTabla, tipAlg);
 		micros = getTime();
-		printf("Ha tardado %lld microsegundos\n", micros);
 		free(tabla);
-
-		do {
-			printf("Introduce 1 para terminar el programa o 2 para volver a medir: ");
-			fgets(input, sizeof(input), stdin);
-		} while ((strtol(input, &tmp, 10) != 1) && (strtol(input, &tmp, 10) != 2));
-
-	} while ((strtol(input, &tmp, 10) - 1));
+        
+        printf(" %ld %lld \n",tamTabla, micros);
+	}
 
 	return 0;
 }
