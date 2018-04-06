@@ -45,26 +45,26 @@ void crearTabla(struct lista *tabla, long ordTabla, long tamTabla)
 	}
 }
 
-void ordenarTabla(struct lista *tabla, long tamTabla, long tipAlg)
+void ordenarTabla(struct lista *tabla, long tamTabla, long tipAlg,long *nmov,long *ncomp)
 {
 	switch (tipAlg) {
 	case 1:
-		burbuja(tabla, tamTabla - 1);
+            burbuja(tabla, tamTabla - 1, nmov,ncomp);
 		break;
 	case 2:
-		insercion(tabla, tamTabla - 1);
+		insercion(tabla, tamTabla - 1,nmov,ncomp);
 		break;
 	case 3:
-		seleccion(tabla, tamTabla - 1);
+		seleccion(tabla, tamTabla - 1,nmov,ncomp);
 		break;
 	case 4:
-		shell(tabla, tamTabla - 1);
+		shell(tabla, tamTabla - 1,nmov,ncomp);
 		break;
 	case 5:
-		monticulo(tabla, tamTabla - 1);
+		monticulo(tabla, tamTabla - 1,nmov,ncomp);
 		break;
 	case 6:
-		quicksort(0, tamTabla - 1, tabla);
+		quicksort(0, tamTabla - 1, tabla,nmov,ncomp);
 		break;
 	}
 }

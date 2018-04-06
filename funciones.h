@@ -39,6 +39,6 @@ void crearTabla(struct lista *, long, long);
 //
 // Outputs: la función opera sobre la tabla y la ordena.
 
-void ordenarTabla(struct lista *, long, long);
+void ordenarTabla(struct lista *, long, long,long*, long*);
 
 #endif

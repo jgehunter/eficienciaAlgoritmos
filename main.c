@@ -31,7 +31,8 @@ int main()
 	struct lista *tabla;		// Tabla a ordenar.
 	char input[256];			// Lectura del input del usuario.
 	char *tmp;					
-
+    long ncomp;
+    long nmov;
 	do {
 		// Se pide al usuario que introduzca el tamaño de la tabla, que debe ser
 		// un entero mayor que 0 y menor MAX_TABLA.
@@ -67,12 +68,16 @@ int main()
 		printf("Seleccionado: elementos = %ld, tabla = %ld, algoritmo = %ld \n",
 			tamTabla, ordTabla, tipAlg);
 
+        ncomp=0;
+        nmov=0;
 		tabla = malloc(tamTabla * sizeof(struct lista));
 		crearTabla(tabla, ordTabla, tamTabla);
 		startTimer();
-		ordenarTabla(tabla, tamTabla, tipAlg);
+		ordenarTabla(tabla, tamTabla, tipAlg,&nmov,&ncomp);
 		micros = getTime();
 		printf("Ha tardado %lld microsegundos\n", micros);
+        printf("Número de comparaciones %ld \n", ncomp);
+        printf("Número de movimientos %ld \n", nmov);
 		free(tabla);
 
 		do {

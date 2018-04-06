@@ -22,7 +22,7 @@
 // tabla el menor índice queda colocado por lo que repitiendo varias veces el
 // proceso se ordena la tabla.
 
-void burbuja(struct lista*, int);
+void burbuja(struct lista*, int, long* ,long*);
 
 // La función ordena una tabla por inserción.
 //
@@ -36,7 +36,7 @@ void burbuja(struct lista*, int);
 // comparandolos con todos los elementos anteriores y insertándolos en la
 // posición que les corresponde.
 
-void insercion(struct lista*, int);
+void insercion(struct lista*, int,long* ,long*);
 
 // La función ordena una tabla por selección.
 //
@@ -49,7 +49,7 @@ void insercion(struct lista*, int);
 // coloca en la primera posición y se vuelve a repetir el proceso sin usar
 // los elementos ya seleccionados hasta que queda ordenada la tabla.
 
-void seleccion(struct lista*, int);
+void seleccion(struct lista*, int,long* ,long*);
 
 // La función proporciona el numero de pasos que le corresponde a cierto tamaño.
 //
@@ -75,7 +75,7 @@ int calcularPasos(int);
 // intercambia elementos que estan alejados entre sí hasta que al final acaba
 // realizando el algoritmo de la burbuja sobre una tabla algo más ordenada.
 
-void shell(struct lista*, int);
+void shell(struct lista*, int ,long* ,long*);
 
 // La función realiza una estructura de montículo.
 //
@@ -89,7 +89,7 @@ void shell(struct lista*, int);
 // Se colocan los elementos de manera que cada elemento sea menor que los dos
 // que los dos siguientes.
 
-void criba(int, int, struct lista*);
+void criba(int, int, struct lista*, long *,long *);
 
 // La función ordena una tabla mediante el método del montículo.
 //
@@ -101,7 +101,7 @@ void criba(int, int, struct lista*);
 // Se van creando montículos a partir de los elementos de la tabla y así
 // se va consiguiendo el elemento menor hasta que queda ordenada la tabla.
 
-void monticulo(struct lista*, int);
+void monticulo(struct lista*, int ,long* ,long*);
 
 // La función ordena una tabla mediante el procedimiento quicksort.
 //
@@ -118,7 +118,7 @@ void monticulo(struct lista*, int);
 // y se repite el proceso con cada una de ellas recursivamente hasta que la
 // tabla queda totalmente ordenada.
 
-void quicksort( int, int, struct lista*);
+void quicksort( int, int, struct lista*,long* ,long*);
 
 #endif
 
