@@ -10,6 +10,7 @@
 #include "algoritmos.h"
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 void mezclar(struct lista *tabla, long tamTabla) 

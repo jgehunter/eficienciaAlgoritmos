@@ -37,7 +37,7 @@ int main()
 		// Se pide al usuario que introduzca el tamaño de la tabla, que debe ser
 		// un entero mayor que 0 y menor MAX_TABLA.
 		do {
-			printf("Selecciona el numero de elementos de la tabla: ");
+			printf("\nSelecciona el numero de elementos de la tabla: ");
 			fgets(input, sizeof(input), stdin);
 			tamTabla = strtol(input, &tmp, 10);
 			memset(input, 0, sizeof(input));
@@ -47,8 +47,8 @@ int main()
 		// tabla: ordenada de menor a mayor, ordenada de mayor a menor o de forma
 		// aleatoria.
 		do {
-			printf("Selecciona la ordenacion de la tabla: \n 1.Ordenada");
-			printf(" \n 2.Inversa \n 3.Aleatoria \n");
+			printf("\nSelecciona la ordenacion de la tabla: \n 1.Ordenada");
+			printf(" \n 2.Inversa \n 3.Aleatoria \n\n");
 			fgets(input, sizeof(input), stdin);
 			ordTabla = strtol(input, &tmp, 10);
 			memset(input, 0, sizeof(input));
@@ -57,31 +57,31 @@ int main()
 		// Se pide al usuario que introduzca el algoritmo que quiere utilizar
 		// para ordenar la tabla.
 		do {
-			printf("Selecciona el algoritmo: \n 1.Burbuja \n 2.Insercion \n");
-			printf(" 3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n");
+			printf("\nSelecciona el algoritmo: \n 1.Burbuja \n 2.Insercion \n");
+			printf(" 3.Seleccion \n 4.Shell \n 5.Monticulo \n 6.Quicksort \n\n");
 			fgets(input, sizeof(input), stdin);
 			tipAlg = strtol(input, &tmp, 10);
 			memset(input, 0, sizeof(input));
 		} while ((tipAlg != 1) && (tipAlg != 2) && (tipAlg != 3) &&
 			(tipAlg != 4) && (tipAlg != 5) && (tipAlg != 6));
 
-		printf("Seleccionado: elementos = %ld, tabla = %ld, algoritmo = %ld \n",
+		printf("\nSeleccionado: elementos = %ld, tabla = %ld, algoritmo = %ld \n",
 			tamTabla, ordTabla, tipAlg);
 
         ncomp=0;
         nmov=0;
-		tabla = malloc(tamTabla * sizeof(struct lista));
+		tabla = (struct lista*) malloc(tamTabla * sizeof(struct lista));
 		crearTabla(tabla, ordTabla, tamTabla);
 		startTimer();
 		ordenarTabla(tabla, tamTabla, tipAlg,&nmov,&ncomp);
 		micros = getTime();
-		printf("Ha tardado %lld microsegundos\n", micros);
-        printf("Número de comparaciones %ld \n", ncomp);
-        printf("Número de movimientos %ld \n", nmov);
+		printf("\nHa tardado %lld microsegundos\n", micros);
+        printf("Numero de comparaciones %ld \n", ncomp);
+        printf("Numero de movimientos %ld \n", nmov);
 		free(tabla);
 
 		do {
-			printf("Introduce 1 para terminar el programa o 2 para volver a medir: ");
+			printf("\nIntroduce 1 para terminar el programa o 2 para volver a medir: ");
 			fgets(input, sizeof(input), stdin);
 		} while ((strtol(input, &tmp, 10) != 1) && (strtol(input, &tmp, 10) != 2));
 
