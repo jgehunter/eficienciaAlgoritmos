@@ -31,18 +31,23 @@ int main()
 	struct lista *tabla;		// Tabla a ordenar.
 	char input[256];			// Lectura del input del usuario.
 	char *tmp;					
+    long ncomp;
+    long nmov;
     
-    tipAlg = 3;
+    
+    
+    tipAlg = 6;
    
     ordTabla = 3;
     
+
     
-    for(tamTabla=0; tamTabla<=250; tamTabla=tamTabla+5){
+    for(tamTabla=20; tamTabla<=1000; tamTabla=tamTabla+20){
         
 		tabla = malloc(tamTabla * sizeof(struct lista));
 		crearTabla(tabla, ordTabla, tamTabla);
 		startTimer();
-		ordenarTabla(tabla, tamTabla, tipAlg);
+		ordenarTabla(tabla, tamTabla, tipAlg,&nmov,&ncomp);
 		micros = getTime();
 		free(tabla);
         
